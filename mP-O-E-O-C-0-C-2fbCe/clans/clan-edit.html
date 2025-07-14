@@ -1,1 +1,63 @@
-.
+<!-- clans/clan-edit.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تعديل بيانات الكلان</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>تعديل بيانات الكلان</h1>
+  </header>
+
+  <main>
+    <form id="editClanForm">
+      <label for="clanName">اسم الكلان:</label><br />
+      <input type="text" id="clanName" name="clanName" minlength="3" maxlength="20" required /><br /><br />
+
+      <label for="clanDescription">وصف الكلان:</label><br />
+      <textarea id="clanDescription" name="clanDescription" rows="4" maxlength="250" required></textarea><br /><br />
+
+      <button type="submit">حفظ التعديلات</button>
+      <button type="button" onclick="cancelEdit()">إلغاء</button>
+    </form>
+  </main>
+
+  <script>
+    // بيانات تجريبية: بدّلها ببيانات الكلان الحقيقية من السيرفر
+    const clanData = {
+      name: "مثك قيم",
+      description: "كلان مميز في لعبة GMK"
+    };
+
+    // تعبئة النموذج بالبيانات الحالية
+    document.getElementById("clanName").value = clanData.name;
+    document.getElementById("clanDescription").value = clanData.description;
+
+    document.getElementById("editClanForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const newName = document.getElementById("clanName").value.trim();
+      const newDesc = document.getElementById("clanDescription").value.trim();
+
+      if (newName.length < 3 || newName.length > 20) {
+        alert("اسم الكلان لازم يكون من 3 إلى 20 حرف.");
+        return;
+      }
+      if (newDesc.length === 0) {
+        alert("وصف الكلان لازم يكون موجود.");
+        return;
+      }
+
+      // هنا تضيف كود حفظ البيانات في السيرفر
+      alert(`تم تحديث بيانات الكلان:\nالاسم: ${newName}\nالوصف: ${newDesc}`);
+      // رجع المستخدم لصفحة لوحة الكلان
+      window.location.href = "/clans/clan-dashboard.html";
+    });
+
+    function cancelEdit() {
+      window.location.href = "/clans/clan-dashboard.html";
+    }
+  </script>
+</body>
+</html>
