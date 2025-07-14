@@ -1,1 +1,32 @@
-.
+[
+  {
+    "clanId": "clan001",
+    "name": "GameMasters",
+    "founderId": "user123",
+    "founderUsername": "gmkuser",
+    "description": "أفضل كلان في اللعب الجماعي",
+    "createdDate": "2025-01-15T12:00:00Z",
+    "members": [
+      {"userId": "user123", "username": "gmkuser", "role": "Founder"},
+      {"userId": "user789", "username": "player1", "role": "Member"}
+    ],
+    "bannedUsers": ["user456"],
+    "applications": ["app001", "app002"],
+    "status": "active"
+  },
+  {
+    "clanId": "clan002",
+    "name": "NoLimits",
+    "founderId": "user456",
+    "founderUsername": "user456",
+    "description": "كلان بلا حدود",
+    "createdDate": "2025-02-20T15:30:00Z",
+    "members": [
+      {"userId": "user456", "username": "user456", "role": "Founder"},
+      {"userId": "user999", "username": "newplayer", "role": "Member"}
+    ],
+    "bannedUsers": [],
+    "applications": [],
+    "status": "active"
+  }
+]
