@@ -1,1 +1,33 @@
-.
+<!-- auth/user-dashboard.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>لوحة تحكم المستخدم</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>مرحبًا، <span id="username-display">المستخدم</span></h1>
+    <button onclick="logout()">تسجيل خروج</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>معلومات الحساب</h2>
+      <p>اسم المستخدم: <span id="username"></span></p>
+      <p>البريد الإلكتروني: <span id="email"></span></p>
+      <p>تاريخ الميلاد: <span id="birthdate"></span></p>
+      <p>نوع الاشتراك: <span id="subscription"></span></p>
+    </section>
+
+    <section>
+      <h2>إدارة الكلان</h2>
+      <button onclick="goToClanDashboard()">لوحة تحكم الكلان</button>
+      <button onclick="applyForClan()">تقديم على كلان</button>
+    </section>
+  </main>
+
+  <script src="/assets/js/user.js"></script>
+</body>
+</html>
