@@ -1,1 +1,43 @@
-.
+/* Subscription 1: Free */
+.theme-1 {
+  --main-color: #888888;
+  --accent-color: #aaaaaa;
+  --bg-color: #f7f7f7;
+  --text-color: #222222;
+}
+
+/* Subscription 2: Beginner */
+.theme-2 {
+  --main-color: #1e90ff;
+  --accent-color: #63b3ed;
+  --bg-color: #f0f8ff;
+  --text-color: #111111;
+}
+
+/* Subscription 3: Sweaty */
+.theme-3 {
+  --main-color: #e0b100;
+  --accent-color: #ffd700;
+  --bg-color: #fffbea;
+  --text-color: #000000;
+}
+
+/* General styling */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button,
+.card,
+.header {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+a {
+  color: var(--accent-color);
+}
