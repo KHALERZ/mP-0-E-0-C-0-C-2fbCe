@@ -1,1 +1,26 @@
-.
+[
+  {
+    "reportId": "rep001",
+    "reporterId": "user123",
+    "reportedUserId": "user456",
+    "clanId": "clan001",
+    "type": "سلوك غير لائق",
+    "description": "قام بالإساءة لي في الدردشة",
+    "status": "open",
+    "dateReported": "2025-07-14T14:30:00Z",
+    "handledBy": null,
+    "resolution": null
+  },
+  {
+    "reportId": "rep002",
+    "reporterId": "user789",
+    "reportedUserId": "user999",
+    "clanId": "clan002",
+    "type": "غش",
+    "description": "يستخدم برامج مساعدة في اللعبة",
+    "status": "closed",
+    "dateReported": "2025-07-10T10:15:00Z",
+    "handledBy": "admin001",
+    "resolution": "تم حظره مؤقتاً لمدة أسبوع"
+  }
+]
