@@ -1,1 +1,42 @@
-.
+<!-- clans/clan-application-result.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>نتيجة طلب الانضمام للكلان</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>نتيجة طلب الانضمام</h1>
+    <button onclick="goToClanDashboard()">العودة إلى لوحة الكلان</button>
+  </header>
+
+  <main>
+    <section id="applicationResult">
+      <p>جاري تحميل نتيجة طلبك...</p>
+    </section>
+  </main>
+
+  <script>
+    // مثال جافاسكربت لعرض النتيجة حسب استجابة من السيرفر (تعديل حسب النظام)
+    document.addEventListener("DOMContentLoaded", () => {
+      // استبدل هذا بالكود الحقيقي لجلب البيانات من السيرفر
+      const applicationStatus = localStorage.getItem('clanApplicationStatus') || 'pending'; 
+      const resultSection = document.getElementById('applicationResult');
+
+      if (applicationStatus === 'accepted') {
+        resultSection.innerHTML = "<p>مبروك! تم قبول طلبك في الكلان.</p>";
+      } else if (applicationStatus === 'rejected') {
+        resultSection.innerHTML = "<p>نأسف، تم رفض طلبك في الكلان.</p>";
+      } else {
+        resultSection.innerHTML = "<p>طلبك قيد المراجعة. انتظر الرد قريبًا.</p>";
+      }
+    });
+
+    function goToClanDashboard() {
+      window.location.href = "/clans/clan-dashboard.html";
+    }
+  </script>
+</body>
+</html>
