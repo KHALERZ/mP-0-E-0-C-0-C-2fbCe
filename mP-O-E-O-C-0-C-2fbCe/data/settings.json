@@ -1,1 +1,25 @@
-.
+{
+  "siteName": "GMK Clan Website",
+  "siteUrl": "https://gmk-clan-website.com",
+  "adminEmail": "admin@gmk-clan-website.com",
+  "defaultLanguage": "ar",
+  "timezone": "Asia/Riyadh",
+  "maxClanMembers": 50,
+  "minUsernameLength": 4,
+  "maxUsernameLength": 20,
+  "minPasswordLength": 8,
+  "maxPasswordLength": 24,
+  "allowedSubscriptions": {
+    "1": "free",
+    "2": "beginner",
+    "3": "advanced"
+  },
+  "ageRestrictions": {
+    "minAge": 10,
+    "warnAgeMax": 13,
+    "blockAgeMin": 14
+  },
+  "bannedUsernames": ["nothing", "admin", "moderator", "system"],
+  "termsVersion": "1.0",
+  "maintenanceMode": false
+}
