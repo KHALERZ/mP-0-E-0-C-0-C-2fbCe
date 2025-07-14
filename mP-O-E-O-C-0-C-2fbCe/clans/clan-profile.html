@@ -1,1 +1,76 @@
-.
+<!-- clans/clan-profile.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>ملف الكلان</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="clanName">اسم الكلان</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>وصف الكلان</h2>
+      <p id="clanDescription">...</p>
+    </section>
+
+    <section>
+      <h2>أعضاء الكلان</h2>
+      <ul id="membersList">
+        <!-- تظهر الأعضاء هنا -->
+      </ul>
+    </section>
+
+    <section>
+      <h2>معلومات إضافية</h2>
+      <p><strong>تاريخ التأسيس:</strong> <span id="foundingDate"></span></p>
+      <p><strong>عدد الأعضاء:</strong> <span id="membersCount"></span></p>
+    </section>
+  </main>
+
+  <script>
+    // نفترض إنه الرابط يجي مع باراميتر ?id=رقم_الكلان
+    const urlParams = new URLSearchParams(window.location.search);
+    const clanId = urlParams.get('id');
+
+    // بيانات تجريبية، استبدلها بالبيانات الحقيقية من السيرفر
+    const clans = [
+      {
+        id: "1",
+        name: "مثك قيم",
+        description: "أفضل كلان GMK",
+        foundingDate: "2023-01-15",
+        members: ["gmk1", "gmk2", "gmk3"]
+      },
+      {
+        id: "2",
+        name: "المحاربين",
+        description: "كلان قوي وفعال",
+        foundingDate: "2022-11-30",
+        members: ["userA", "userB"]
+      }
+    ];
+
+    const clan = clans.find(c => c.id === clanId);
+
+    if (clan) {
+      document.getElementById("clanName").textContent = clan.name;
+      document.getElementById("clanDescription").textContent = clan.description;
+      document.getElementById("foundingDate").textContent = clan.foundingDate;
+      document.getElementById("membersCount").textContent = clan.members.length;
+
+      const membersList = document.getElementById("membersList");
+      clan.members.forEach(member => {
+        const li = document.createElement("li");
+        li.textContent = member;
+        membersList.appendChild(li);
+      });
+    } else {
+      document.body.innerHTML = "<p>الكلان غير موجود.</p>";
+    }
+  </script>
+</body>
+</html>
