@@ -1,1 +1,57 @@
-.
+<!-- clans/clan-list.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>قائمة الكلانات</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>قائمة الكلانات</h1>
+  </header>
+
+  <main>
+    <input type="text" id="searchInput" placeholder="ابحث عن كلان..." />
+
+    <ul id="clanList">
+      <!-- الكلانات تظهر هنا -->
+    </ul>
+  </main>
+
+  <script>
+    // بيانات تجريبية - استبدلها بالبيانات الحقيقية من السيرفر
+    const clans = [
+      { id: 1, name: "مثك قيم", description: "أفضل كلان GMK" },
+      { id: 2, name: "المحاربين", description: "كلان قوي وفعال" },
+      { id: 3, name: "الأسود الذهبية", description: "كلان الاتحاد" },
+    ];
+
+    const clanList = document.getElementById("clanList");
+    const searchInput = document.getElementById("searchInput");
+
+    function displayClans(filteredClans) {
+      clanList.innerHTML = "";
+      if (filteredClans.length === 0) {
+        clanList.innerHTML = "<li>مافي كلانات تطابق البحث.</li>";
+        return;
+      }
+      filteredClans.forEach(clan => {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${clan.name}</strong> - ${clan.description} 
+                        <a href="/clans/clan-profile.html?id=${clan.id}">عرض</a>`;
+        clanList.appendChild(li);
+      });
+    }
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.toLowerCase();
+      const filtered = clans.filter(clan => clan.name.toLowerCase().includes(query));
+      displayClans(filtered);
+    });
+
+    // عرض الكلانات كلها عند التحميل
+    displayClans(clans);
+  </script>
+</body>
+</html>
