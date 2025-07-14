@@ -1,1 +1,77 @@
-.
+<!-- clans/clan-applications.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>طلبات التقديم للكلان</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>طلبات التقديم للكلان</h1>
+  </header>
+
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>اسم المتقدم</th>
+          <th>تاريخ التقديم</th>
+          <th>حالة الطلب</th>
+          <th>الإجراءات</th>
+        </tr>
+      </thead>
+      <tbody id="applicationsTableBody">
+        <!-- الطلبات تتحط هنا ديناميك -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="/assets/js/clan.js"></script>
+  <script>
+    // جلب الطلبات (مثال بسيط، استبدلها بالAPI أو مصدر بياناتك)
+    const applications = [
+      { id: 1, username: "player1", date: "2025-07-14", status: "pending" },
+      { id: 2, username: "player2", date: "2025-07-13", status: "accepted" },
+      { id: 3, username: "player3", date: "2025-07-12", status: "rejected" },
+    ];
+
+    const tbody = document.getElementById("applicationsTableBody");
+
+    function renderApplications() {
+      tbody.innerHTML = "";
+      applications.forEach(app => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${app.username}</td>
+          <td>${app.date}</td>
+          <td>${app.status}</td>
+          <td>
+            ${app.status === "pending" ? `
+              <button onclick="handleApplication(${app.id}, 'accept')">قبول</button>
+              <button onclick="handleApplication(${app.id}, 'reject')">رفض</button>
+            ` : `<span>تم ${app.status}</span>`}
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function handleApplication(id, action) {
+      // هنا تضيف كود الإرسال للسيرفر أو تحديث البيانات
+      const app = applications.find(a => a.id === id);
+      if (!app) return alert("طلب غير موجود");
+
+      if (action === "accept") {
+        app.status = "accepted";
+      } else if (action === "reject") {
+        app.status = "rejected";
+      }
+      alert(`تم ${action === "accept" ? "قبول" : "رفض"} الطلب بنجاح`);
+      renderApplications();
+    }
+
+    renderApplications();
+  </script>
+</body>
+</html>
