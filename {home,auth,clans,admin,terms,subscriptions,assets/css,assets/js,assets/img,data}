@@ -1,0 +1,32 @@
+mkdir -p mP-O-E-O-C-0-C-2fbCe/{home,auth,clans,admin,terms,subscriptions,assets/css,assets/js,assets/img,data}
+
+touch mP-O-E-O-C-0-C-2fbCe/home/index.html
+touch mP-O-E-O-C-0-C-2fbCe/auth/login.html
+touch mP-O-E-O-C-0-C-2fbCe/auth/register.html
+touch mP-O-E-O-C-0-C-2fbCe/auth/create-profile.html
+touch mP-O-E-O-C-0-C-2fbCe/auth/user-dashboard.html
+touch mP-O-E-O-C-0-C-2fbCe/auth/user-profile.html
+touch mP-O-E-O-C-0-C-2fbCe/clans/clan-dashboard.html
+touch mP-O-E-O-C-0-C-2fbCe/clans/clan-profile.html
+touch mP-O-E-O-C-0-C-2fbCe/clans/clan-edit.html
+touch mP-O-E-O-C-0-C-2fbCe/clans/clan-applications.html
+touch mP-O-E-O-C-0-C-2fbCe/clans/clan-list.html
+touch mP-O-E-O-C-0-C-2fbCe/clans/clan-application-result.html
+touch mP-O-E-O-C-0-C-2fbCe/admin/admin-dashboard.html
+touch mP-O-E-O-C-0-C-2fbCe/terms/terms.html
+touch mP-O-E-O-C-0-C-2fbCe/subscriptions/subscriptions.html
+
+touch mP-O-E-O-C-0-C-2fbCe/assets/css/style.css
+touch mP-O-E-O-C-0-C-2fbCe/assets/css/themes.css
+touch mP-O-E-O-C-0-C-2fbCe/assets/js/app.js
+touch mP-O-E-O-C-0-C-2fbCe/assets/js/auth.js
+touch mP-O-E-O-C-0-C-2fbCe/assets/js/clan.js
+touch mP-O-E-O-C-0-C-2fbCe/assets/js/user.js
+touch mP-O-E-O-C-0-C-2fbCe/assets/js/admin.js
+
+touch mP-O-E-O-C-0-C-2fbCe/data/users.json
+touch mP-O-E-O-C-0-C-2fbCe/data/clans.json
+touch mP-O-E-O-C-0-C-2fbCe/data/applications.json
+touch mP-O-E-O-C-0-C-2fbCe/data/bans.json
+touch mP-O-E-O-C-0-C-2fbCe/data/reports.json
+touch mP-O-E-O-C-0-C-2fbCe/data/settings.json
