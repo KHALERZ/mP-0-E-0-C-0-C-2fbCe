@@ -1,1 +1,58 @@
-.
+<!-- clans/clan-dashboard.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>لوحة تحكم الكلان</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>لوحة تحكم الكلان</h1>
+  </header>
+
+  <main>
+    <section id="clan-info">
+      <h2>معلومات الكلان</h2>
+      <p><strong>اسم الكلان:</strong> <span id="clanName">---</span></p>
+      <p><strong>وصف الكلان:</strong> <span id="clanDescription">---</span></p>
+      <p><strong>عدد الأعضاء:</strong> <span id="clanMembersCount">0</span></p>
+    </section>
+
+    <section id="manage-applications">
+      <h2>طلبات الانضمام</h2>
+      <a href="/clans/clan-applications.html">عرض الطلبات</a>
+    </section>
+
+    <section id="clan-settings">
+      <h2>إعدادات الكلان</h2>
+      <button onclick="editClan()">تعديل بيانات الكلان</button>
+      <button onclick="deleteClan()">حذف الكلان</button>
+    </section>
+  </main>
+
+  <script>
+    // بيانات تجريبية - بدّلها ببيانات حقيقية من السيرفر
+    const clanData = {
+      name: "مثك قيم",
+      description: "كلان مميز في لعبة GMK",
+      membersCount: 12
+    };
+
+    document.getElementById("clanName").textContent = clanData.name;
+    document.getElementById("clanDescription").textContent = clanData.description;
+    document.getElementById("clanMembersCount").textContent = clanData.membersCount;
+
+    function editClan() {
+      window.location.href = "/clans/clan-edit.html";
+    }
+
+    function deleteClan() {
+      if(confirm("هل أنت متأكد من حذف الكلان؟ هذه الخطوة لا يمكن التراجع عنها!")) {
+        alert("تم حذف الكلان (تجريبي)");
+        // هنا تضيف الكود لحذف الكلان من السيرفر
+      }
+    }
+  </script>
+</body>
+</html>
