@@ -1,1 +1,50 @@
-.
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة تحكم مؤسس الموقع</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/themes.css" />
+</head>
+<body>
+
+  <header class="admin-header">
+    <h1>لوحة تحكم مؤسس الموقع</h1>
+  </header>
+
+  <nav class="admin-sidebar">
+    <ul>
+      <li><a href="../home/index.html">واجهة مثك قيم</a></li>
+      <li><a href="#">إحصاءات الموقع</a></li>
+      <li><a href="#">إدارة الكلانات</a></li>
+      <li><a href="#">إدارة الأعضاء</a></li>
+      <li><a href="#">الشكاوى والاعتراضات</a></li>
+      <li><a href="#">المحظورين</a></li>
+      <li><a href="#">المهام الإدارية</a></li>
+      <li><a href="#">واجهة تعديل الموقع</a></li>
+      <li><a href="../auth/user-profile.html">حسابي</a></li>
+      <li><a href="../auth/login.html">تسجيل الخروج</a></li>
+    </ul>
+  </nav>
+
+  <main class="admin-main">
+    <section class="admin-stats">
+      <h2>الإحصائيات العامة</h2>
+      <div class="stats-grid">
+        <div class="stat-box">عدد الكلانات: <span id="clans-count">.</span></div>
+        <div class="stat-box">عدد الأعضاء: <span id="users-count">.</span></div>
+        <div class="stat-box">عدد الطلبات: <span id="applications-count">.</span></div>
+        <div class="stat-box">عدد المحظورين: <span id="bans-count">.</span></div>
+      </div>
+    </section>
+
+    <section class="admin-tools">
+      <h2>أدوات التحكم</h2>
+      <p>اختر من القائمة الجانبية لإدارة أقسام الموقع.</p>
+    </section>
+  </main>
+
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>
