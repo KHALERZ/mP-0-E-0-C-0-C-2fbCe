@@ -1,1 +1,42 @@
-.
+<!-- create-profile.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>اختيار نوع الحساب</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>حدد نوع حسابك</h2>
+    <p>اختر إذا كنت ترغب بأن تكون مؤسس كلان أو فرد عادي.</p>
+
+    <div class="choice-buttons">
+      <button onclick="selectRole('founder')">مؤسس كلان</button>
+      <button onclick="selectRole('member')">فرد</button>
+    </div>
+  </div>
+
+  <script>
+    function selectRole(role) {
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (!currentUser) {
+        alert("يجب تسجيل الدخول أولاً.");
+        window.location.href = "/auth/login.html";
+        return;
+      }
+
+      currentUser.role = role;
+
+      localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+      if (role === "founder") {
+        window.location.href = "/clans/clan-dashboard.html";
+      } else {
+        window.location.href = "/auth/user-dashboard.html";
+      }
+    }
+  </script>
+</body>
+</html>
