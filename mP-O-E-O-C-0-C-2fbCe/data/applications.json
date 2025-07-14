@@ -1,1 +1,29 @@
-.
+[
+  {
+    "applicationId": "app001",
+    "clanId": "1",
+    "userId": "gmk1",
+    "username": "gmk1",
+    "applicationDate": "2025-07-14T12:00:00Z",
+    "status": "pending",  // pending, accepted, rejected
+    "roleRequested": "نائب"
+  },
+  {
+    "applicationId": "app002",
+    "clanId": "2",
+    "userId": "userA",
+    "username": "userA",
+    "applicationDate": "2025-07-10T09:30:00Z",
+    "status": "accepted",
+    "roleRequested": "مسؤول الحساب"
+  },
+  {
+    "applicationId": "app003",
+    "clanId": "1",
+    "userId": "userZ",
+    "username": "userZ",
+    "applicationDate": "2025-07-12T15:45:00Z",
+    "status": "rejected",
+    "roleRequested": "إدارة عليا"
+  }
+]
