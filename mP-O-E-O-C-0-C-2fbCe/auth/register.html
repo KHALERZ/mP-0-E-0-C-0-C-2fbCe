@@ -1,1 +1,35 @@
-.
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>تسجيل حساب جديد</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <div class="register-container">
+    <h2>تسجيل حساب جديد</h2>
+    <form onsubmit="handleRegister(event)">
+      <label for="username">اسم المستخدم</label>
+      <input type="text" id="username" minlength="4" maxlength="20" required />
+
+      <label for="password">كلمة المرور</label>
+      <input type="password" id="password" minlength="8" maxlength="24" required />
+
+      <label for="birthdate">تاريخ الميلاد</label>
+      <input type="date" id="birthdate" required />
+
+      <label>
+        <input type="checkbox" id="terms" required />
+        أوافق على الشروط والأحكام
+      </label>
+
+      <button type="submit">سجل الآن</button>
+    </form>
+
+    <p>عندك حساب؟ <a href="/auth/login.html">سجل دخول</a></p>
+  </div>
+
+  <script src="/assets/js/auth.js"></script>
+</body>
+</html>
