@@ -1,1 +1,22 @@
-.
+[
+  {
+    "banId": "ban001",
+    "userId": "user123",
+    "username": "gmkuser",
+    "clanId": "clan001",
+    "reason": "مخالفة القوانين",
+    "banStart": "2025-07-10T08:00:00Z",
+    "banEnd": "2025-07-17T08:00:00Z",
+    "isActive": true
+  },
+  {
+    "banId": "ban002",
+    "userId": "user456",
+    "username": "user456",
+    "clanId": "clan002",
+    "reason": "سلوك غير لائق",
+    "banStart": "2025-06-20T10:30:00Z",
+    "banEnd": "2025-06-27T10:30:00Z",
+    "isActive": false
+  }
+]
