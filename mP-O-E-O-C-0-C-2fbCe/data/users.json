@@ -1,1 +1,40 @@
-.
+[
+  {
+    "id": 1,
+    "username": "gmk",
+    "email": "gmk@help.com",
+    "passwordHash": "hashed_password_here",
+    "birthDate": "2021-10-24",
+    "subscription": "3",        // 1=free, 2=beginner, 3=advanced
+    "role": "founder",          // founder, admin, user, clanLeader, etc.
+    "clanId": null,
+    "acceptedTerms": true,
+    "createdAt": "2025-07-14T10:00:00Z",
+    "lastLogin": "2025-07-14T15:00:00Z",
+    "status": "active",         // active, banned, pending
+    "profile": {
+      "avatarUrl": "/assets/img/default-avatar.png",
+      "bio": "مؤسس الموقع GMK",
+      "location": "Saudi Arabia"
+    }
+  },
+  {
+    "id": 2,
+    "username": "user123",
+    "email": "user123@example.com",
+    "passwordHash": "hashed_password_here",
+    "birthDate": "2009-05-12",
+    "subscription": "1",
+    "role": "user",
+    "clanId": 5,
+    "acceptedTerms": true,
+    "createdAt": "2024-11-20T08:30:00Z",
+    "lastLogin": "2025-07-13T18:45:00Z",
+    "status": "active",
+    "profile": {
+      "avatarUrl": "/assets/img/user123.png",
+      "bio": "عضو جديد في الكلان",
+      "location": "Riyadh"
+    }
+  }
+]
